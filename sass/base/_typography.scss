@@ -1,0 +1,22 @@
+@use '../abstracts/' as *;
+
+.name {
+    @include name();
+}
+
+.description {
+    @include description();
+    
+    &:where(:hover, :focus){
+        @include hovered();
+        color: map-get($colors, primary, text);
+    }
+}
+
+.title {
+    @include title();
+}
+
+.hours {
+    @include hours();
+}

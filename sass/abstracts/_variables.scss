@@ -1,0 +1,68 @@
+// maps
+
+$colors: (
+    primary: (
+        text: white,
+        card: hsl(246, 80%, 60%),
+        work: hsl(15, 100%, 70%),
+        play: hsl(195, 74%, 62%),
+        study: hsl(348, 100%, 68%),
+        exercise: hsl(145, 58%, 55%),
+        social: hsl(264, 64%, 52%),
+        self-care: hsl(43, 84%, 65%)
+        ),
+    neutral: (
+        100: hsl(236, 100%, 87%),
+        400: hsl(235, 45%, 61%),
+        800: hsl(235, 46%, 20%),
+        900: hsl(226, 43%, 10%)
+    )
+);
+
+$breakpoints: (
+    x-small: 25rem,
+    small: 40rem,
+    medium: 65rem,
+    large: 90rem
+);
+
+$sizes: (
+    100: 0.5rem,
+    200: .9375rem,
+    300: 1rem,
+    400: 1.125rem,
+    500: 1.25rem,
+    600: 1.5rem,
+    700: 2rem,
+    800: 2.5rem,
+    900: 3.5rem
+);
+
+$font-families: (
+    rubik: 'Rubik'
+);
+
+$font-weights: (
+    light: 300,
+    regular: 400,
+    medium: 500
+);
+
+// actual variables 
+
+$fs-name: map-get($map: $sizes, $key: 800);
+$fs-description: map-get($sizes, 200);
+$fs-title: map-get($sizes, 400);
+$fs-hours: map-get($sizes, 900);
+
+$ff-main: map-get($font-families, rubik);
+
+$ff-name: $ff-main;
+$ff-description: $ff-main;
+$ff-title: $ff-main;
+$ff-hours: $ff-main;
+
+$fw-name: map-get($font-weights, light);
+$fw-description: map-get($font-weights, regular);
+$fw-title: map-get($font-weights, medium);
+$fw-hours: map-get($font-weights, light);
