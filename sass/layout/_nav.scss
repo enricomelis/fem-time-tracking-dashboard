@@ -1,0 +1,42 @@
+@use '../abstracts/' as *;
+
+.profile-box {
+    background-color: map-get($colors, neutral, 800);
+    border-radius: 15px;
+
+    position: relative;
+}
+
+.profile {
+    background-color: map-get($colors, primary, card);
+    border-radius: 15px;
+
+    padding: 2rem;
+}
+
+.profile-box > nav {
+    padding: 2rem;
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+}
+
+.profile > img {
+    width: 80px;
+
+    border: 5px solid white;
+    border-radius: 50%;
+}
+
+.profile > h1 {
+    margin-bottom: 3rem;
+}
+
