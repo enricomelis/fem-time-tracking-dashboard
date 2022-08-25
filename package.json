@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:sass": "sass  --no-source-map sass:public/css",
+    "copy:html": "copyfiles -u 1 ./src/*.html public"
   },
   "devDependencies": {
     "sass": "^1.54.5",
