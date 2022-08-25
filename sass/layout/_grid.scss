@@ -1,20 +1,32 @@
 @use '../abstracts/' as *;
 
-.grid-container{
-    outline: 1px solid blue;
-    width: 60%;
-    margin: auto;
-
+.grid-container {
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
+    width: 85%;
 }
 
-.grid-container > .profile-box {
-    grid-row: span 2;
+
+@media (min-width: map-get($breakpoints, medium)) {
+    .grid-container{
+        width: 60%;
+        margin: auto;
+    
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr;
+        gap: 2rem;
+    }
+    
+    .grid-container > .profile-box {
+        grid-row: span 2;
+    }
+    
+    .exercise {
+        grid-column-start: 2;
+    }
 }
 
-.exercise {
-    grid-column-start: 2;
-}
+
+

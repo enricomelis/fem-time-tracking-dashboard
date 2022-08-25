@@ -4,7 +4,8 @@
     background-color: map-get($colors, neutral, 800);
     border-radius: 15px;
 
-    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .profile {
@@ -15,18 +16,25 @@
 }
 
 .profile-box > nav {
-    padding: 2rem;
-    position: absolute;
-    bottom: 0;
-
+    padding: 1rem;
     width: 100%;
+
+    @include mq(medium){
+        padding: 2rem;
+    }
 }
+
 
 .links {
     display: flex;
-    flex-direction: column;
-    gap: 1em;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include mq(medium) {
+        flex-direction: column;
+        gap: 1em;
+        justify-content: center;
+    }
 }
 
 .profile > img {

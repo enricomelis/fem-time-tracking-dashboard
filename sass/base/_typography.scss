@@ -1,7 +1,10 @@
 @use '../abstracts/' as *;
 
 .name {
-    @include name();
+    @include mq(medium){
+        @include name-desktop();
+    }
+    @include name-mobile();
 }
 
 .description {
@@ -11,6 +14,10 @@
         @include hovered();
         color: map-get($colors, primary, text);
     }
+
+    &__default{
+        @include description__default;
+    }
 }
 
 .title {
@@ -18,5 +25,8 @@
 }
 
 .hours {
-    @include hours();
+    @include hours-mobile();
+    @include mq(medium){
+        @include hours-desktop();
+    }
 }

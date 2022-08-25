@@ -14,7 +14,8 @@ $colors: (
     neutral: (
         100: hsl(236, 100%, 87%),
         400: hsl(235, 45%, 61%),
-        800: hsl(235, 46%, 20%),
+        600: hsl(236, 41, 34),
+        800: hsl(236, 46%, 20%),
         900: hsl(226, 43%, 10%)
     )
 );
@@ -22,7 +23,7 @@ $colors: (
 $breakpoints: (
     x-small: 25rem,
     small: 40rem,
-    medium: 65rem,
+    medium: 75rem,
     large: 90rem
 );
 
@@ -50,10 +51,12 @@ $font-weights: (
 
 // actual variables 
 
-$fs-name: map-get($map: $sizes, $key: 800);
+$fs-name-desktop: map-get($map: $sizes, $key: 800);
+$fs-name-mobile: map-get($map: $sizes, $key: 600);
 $fs-description: map-get($sizes, 200);
 $fs-title: map-get($sizes, 400);
-$fs-hours: map-get($sizes, 900);
+$fs-hours-desktop: map-get($sizes, 900);
+$fs-hours-mobile: map-get($sizes, 700);
 
 $ff-main: map-get($font-families, rubik);
 
