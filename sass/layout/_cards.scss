@@ -31,6 +31,8 @@
 
 @media (min-width: map-get($breakpoints, medium)){
     .card {
+        height: 250px;
+
         > svg {
             position: absolute;
             top: 0;
